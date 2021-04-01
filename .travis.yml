@@ -6,7 +6,10 @@ addons:
     packages:
       - openjdk-15-jdk
 jdk:
-  - openjdk15 
+  - openjdk15
+install:
+  - mvn -N io.takari:maven:wrapper
+  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 before_install:
   - export TZ=Brazil/East
 deploy:
