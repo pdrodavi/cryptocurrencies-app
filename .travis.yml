@@ -1,15 +1,12 @@
 dist: trusty
 language: java
-sudo: true
-addons:
-  apt:
-    packages:
-      - openjdk-15-jdk
+sudo: false
 jdk:
-  - openjdk15
-install:
-  - mvn -N io.takari:maven:wrapper
-  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - oraclejdk15
+script:
+  - java --version
+  - ./mvnw clean install
+  - ./mvnw test
 before_install:
   - chmod +x mvnw
   - export TZ=Brazil/East
