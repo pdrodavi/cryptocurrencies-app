@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.text.DecimalFormat;
@@ -22,7 +23,8 @@ public class HomeController {
     private final QueryCoinsServiceImpl service;
 
     @ResponseStatus(HttpStatus.OK)
-    @GetMapping("/")
+//    @GetMapping("/")
+    @RequestMapping("/")
     public String home(Model model) throws JSONException {
         ResponseEntity<String> responseEntity = service.getCurrency();
         String btc = responseEntity.getBody();
