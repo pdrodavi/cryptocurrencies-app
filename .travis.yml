@@ -1,5 +1,5 @@
 language: java
-sudo: true
+sudo: false
 dist: trusty
 jdk:
   - oraclejdk15
@@ -8,7 +8,7 @@ before_install:
 deploy:
   provider: heroku
   api_key:
-    secure: 4c18f47f-0f76-4a49-9be6-abde7e14a7f5
+    secure: usOiq+ktsNMOirZZxLeuB4d8fLhID1MpmXvfdXQUiLyfXRjJLD3ed3mfiHCMMorRcd/2VCPbLUuNp0D9ccvv95SK7nKpgHSV7LXAzd+ROikS9kJFqjmAlWqPzJt2/xscfkMzys3wrtuSdFN4MHSEgXZ5XLaZJOocnz3Onmaff7ARj9ZjI86/Y60LYkcwPtywlAIdrtftBQTgSkR2xhPKhhD3zOwHtKWx2NWfibOk8YJ8ijR3vpU2Tq2hQM2CSxmTIuQqFNdgpYF96WBRP9MKnqYh12y9544pc36e1RiC75p3AauhBzJ2he2efK/05N82vxypo97U2HfVFn7Kko3Jdawn5gqp12i/X7eL8gV0JN4NBW1dBRvBLdhJ+fjAmt0SeYEMs+XPIkRcPPm6XbuH/zpmXiY4ta3pwXb9YHWSFdvl5fjWmRaYx24e7VWf53/oHplusyCGswgeIv2AnC5UnILAd8pfaVBQf3cGaXJY+/Uz02vRqTHG2t8JSYgcqMQmZ+sfDoT5dSz6nf183JkUXO4QO/jQEs/QncPFeJDiHk4gRjTvf5UmVbgqaaeA/GD2ePQfjqlcfbpuNdghyb5HYmyjnjxhkgbQMFynV4/g05sAPGt6oceHCXDaFdvLeXNp6x0Rfs0iBch8Xi3F9SLqv69KqYSB5hO28nrI70AWO7s=
   app: cryptovaluebtc
   on:
     repo: pdrodavi/cryptocurrencies-app
