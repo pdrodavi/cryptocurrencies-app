@@ -1,19 +1,10 @@
-dist: trusty
 language: java
-sudo: false
 jdk:
   - oraclejdk15
-script:
-  - java --version
-  - ./mvnw clean install
-  - ./mvnw test
-before_install:
-  - chmod +x mvnw
-  - export TZ=Brazil/East
 deploy:
   provider: heroku
   api_key:
-    secure: MIc+dz8Kr4cRc86K8e8IrrZI+d6aZKPEqaw0/Hp9RE2IEJFqAzTv3XL0CH9B8AJxrBsZe/wjI9YbRTKMujAX9AwlYwceBXvAh8zCgFNDa6lOkHPJAlqky1rewLpW8SwTSl1kbMh6VZf9996H+TZ9YJkdOhZpl4ezJVyiZGr/TQn8Mt8jo04a0LIffvT+Mmbbs5hiWD44B+Uv0sQmnpuGJNhS4I372YkiH+CJi0e3MaU2HgxVHEfSxKCh/vscEir55F17OgS4mM0+FbtoG9yInGN4xf818RGMzp4WPN/9H7//AvOWlD8KBV4aLnWYE7wusrKrUJX8YHDFkQGZfJTveBn+5i+FO5qtJyqJB6yljYK7iAJCrdE6h6BS+ICqysaSOY361iOAMi9yD/V5XFc21TENOMmbZh9jAqLdenDf5MYBogSChKOwHlUpusRsn6Xct6i6VLNhS3N3KHTgRl6s0RSAOwn8gctTwYPj9XGzV13tQZuB6iT64gxHXP/x4H7wpKBr4E2lcA4wLQJM0Oo8LG1b3xxU9n09Tw3FLx50iErlfbHdoGK0g9adxozXs6IykRaAdmxgXmkBG+VDE0hS8acxRHVqS0jd+/D8BJwSp5HC3odfy5VeE5mw6CiS9RmGOY2zn5Q01NN7p4XmgrVUSwYhmD39DhfkdtocPxiNK40=
+    secure: $HEROKU_API_KEY
   app: cryptovaluebtc
   on:
     repo: pdrodavi/cryptocurrencies-app
