@@ -1,6 +1,7 @@
 package br.com.pedrodavi.cryptocurrencies.controller;
 
 import br.com.pedrodavi.cryptocurrencies.service.impl.QueryCoinsServiceImpl;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.http.HttpStatus;
@@ -15,9 +16,10 @@ import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 
 @Controller
+@AllArgsConstructor
 public class HomeController {
 
-    @Autowired private QueryCoinsServiceImpl service;
+    private final QueryCoinsServiceImpl service;
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/")
