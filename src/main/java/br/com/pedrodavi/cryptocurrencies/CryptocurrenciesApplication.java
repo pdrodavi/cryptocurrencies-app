@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @EnableFeignClients
 @SpringBootApplication
-@ComponentScan("br.com.pedrodavi")
+@ComponentScan("br.com.pedrodavi.cryptocurrencies")
 public class CryptocurrenciesApplication {
 
 	public static void main(String[] args) {
