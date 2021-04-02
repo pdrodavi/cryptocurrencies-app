@@ -8,7 +8,7 @@ before_install:
 deploy:
   provider: heroku
   api_key:
-    secure: $HEROKU_API_KEY
+    secure: 4c18f47f-0f76-4a49-9be6-abde7e14a7f5
   app: cryptovaluebtc
   on:
     repo: pdrodavi/cryptocurrencies-app
