@@ -18,6 +18,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<spring-cloud.version>2020.0.1</spring-cloud.version>
+		<start-class>br.com.pedrodavi.cryptocurrencies.CryptocurrenciesApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
